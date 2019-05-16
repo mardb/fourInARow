@@ -18,4 +18,11 @@ class Game{
     
     
   }
+/**
+ * get game ready for play
+ */
+  startGame(){
+    
+  }
+
 }
