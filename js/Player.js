@@ -6,4 +6,7 @@ class Player {
     this.active =  active;
     this.tokens = [];
   }
+  createTokens(){
+    const num = [];
+  }
 }
