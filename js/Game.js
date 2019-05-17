@@ -6,6 +6,14 @@ class Game{
 
   }
 
+  /**
+ * Returns active Player.
+ * @return {object} player - The active player
+ */
+  get activePlayer(){
+  return this.players.find(player => player.active)
+  }
+
   /** 
  * Creates two player objects
  * @return  {Array}    An array of two Player objects.
@@ -20,10 +28,12 @@ class Game{
   }
 /**
  * get game ready for play
+ * Initializes game. 
  */
   startGame(){
-    
+    this.board.drawHTMLBoard();
+    this.activePlayer.activeToken.drawHTMLToken();
+    this.ready = true;
   }
 
-  activePlayer(){}
 }
