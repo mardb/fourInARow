@@ -14,15 +14,25 @@ class Board{
    const spaces= [];
 
    for(var x =0; x < this.columns; x++){
-     const column = [];
+     const col = [];
 
      for(var y =0; y < this.rows; y++){
        const space = new Space(x,y);
-       column.push(space);
+       col.push(space);
      }
 
-     space.push(column);
+     space.push(col);
    }
    return spaces;
+  }
+  /**
+   * Draws associated SVG spaces for all game spaces.
+   */
+  drawHTMLBoard(){
+    for(let column of this.spaces ){
+      for(let space of column){
+        space.drawSVGSpace();
+      }
+    }
   }
 }

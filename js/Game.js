@@ -25,4 +25,5 @@ class Game{
     
   }
 
+  activePlayer(){}
 }
